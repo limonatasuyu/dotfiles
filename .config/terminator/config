@@ -1,0 +1,16 @@
+[global_config]
+  inactive_color_offset = 0.7563025210084033
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.58
+    background_type = transparent
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

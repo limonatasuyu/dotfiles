@@ -1,0 +1,23 @@
+# Set keyboard layout for the openbox
+setxkbmap tr &
+
+# Set background Photo
+feh --bg-fill ~/Downloads/Image_created_with_a_mobile_phone.png &
+
+# Run composition manager
+picom &
+
+# Attempt to load rc.xml
+if openbox --reconfigure 2> ~/.config/openbox/openbox_error.log; then
+  echo "Openbox started successfully"
+else
+  echo "Error: Openbox failed to start with rc.xml. Falling back to backup configuration"
+
+  # Saving the failed rc.xml
+  cp ~/.config/openbox/rc.xml ~/.config/openbox/rc.xml.failed
+  # Using the backup file
+  cp ~/.config/openbox/rc.xml.bak ~/.config/openbox/rc.xml
+
+  openbox --restart
+
+fi

@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/emre/Downloads/Image_created_with_a_mobile_phone.png' 
